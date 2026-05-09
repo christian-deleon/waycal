@@ -15,17 +15,17 @@ window.waycal {
     background: transparent;
 }
 .waycal-root {
-    background-color: #1a2125;
-    border: 2px solid #8FBC8F;
+    background-color: @theme_bg_color;
+    border: 2px solid @borders;
     border-radius: 0;
     padding: 14px 18px;
-    color: #c9d1d9;
+    color: @theme_fg_color;
     font-family: "CaskaydiaMono Nerd Font", monospace;
     font-size: 13px;
     min-width: 260px;
 }
 .waycal-root.rounded {
-    background-color: rgba(26, 33, 37, 0.96);
+    background-color: alpha(@theme_bg_color, 0.96);
     border: 2px solid transparent;
     border-radius: 16px;
 }
@@ -35,7 +35,7 @@ window.waycal {
     padding-bottom: 6px;
 }
 .waycal-weekday {
-    color: #8FBC8F;
+    color: @theme_selected_bg_color;
     font-weight: bold;
     padding: 2px 6px;
 }
@@ -47,8 +47,8 @@ window.waycal {
     opacity: 0.3;
 }
 .waycal-day.today {
-    background-color: #8FBC8F;
-    color: #1a2125;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
     border-radius: 0;
     font-weight: bold;
 }
@@ -56,11 +56,11 @@ window.waycal {
     border-radius: 8px;
 }
 .waycal-footer {
-    color: #6a7a71;
+    color: alpha(@theme_fg_color, 0.55);
     font-size: 10px;
     padding-top: 8px;
     margin-top: 6px;
-    border-top: 1px solid rgba(143, 188, 143, 0.18);
+    border-top: 1px solid @borders;
 }
 "#;
 
